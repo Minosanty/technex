@@ -250,7 +250,6 @@ section {
     transform: scale(1.12);
 }
 
-
 footer {
     text-align: center;
     color: #b5b9e7;
@@ -261,23 +260,96 @@ footer {
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+    section {
+        max-width: 96vw;
+    }
+}
 @media (max-width: 900px) {
     .galeria-grid {
         grid-template-columns: 1fr 1fr;
+    }
+    .hero {
+        padding: 3rem 1rem 2rem 1rem;
     }
 }
 @media (max-width: 600px) {
     .hero-title {
         font-size: 2rem;
     }
+    .hero {
+        padding: 2.3rem 0.2rem 1.2rem 0.2rem;
+    }
     .galeria-grid {
         grid-template-columns: 1fr;
+        gap: 1.3rem;
     }
     section {
         padding: 1.2rem 0.2rem;
+        max-width: 100vw;
+        border-radius: 0.7rem;
     }
     .contact-form {
         max-width: 98vw;
+    }
+    .logo-container {
+        margin-bottom: 1.1rem;
+    }
+    .hero-logo {
+        width: 120px;
+    }
+    .hero-subtitle {
+        font-size: 1.02rem;
+    }
+    .proyecto-img {
+        height: 120px;
+    }
+    .proyecto-card h3 {
+        font-size: 1.04rem;
+    }
+    .proyecto-card p {
+        font-size: 0.97rem;
+        padding: 0 0.5rem;
+    }
+    .redes-sociales {
+        gap: 1rem;
+        margin-top: 0.8rem;
+    }
+    .social-link {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+    .social-link img {
+        width: 22px;
+        height: 22px;
+    }
+    footer {
+        padding: 0.8rem 0 1.1rem 0;
+        font-size: 0.87rem;
+    }
+}
+
+/* Mejor soporte para pantallas muy pequeñas */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.2rem;
+        letter-spacing: 0.9px;
+    }
+    .hero-btn {
+        font-size: 0.92rem;
+        padding: 0.6em 1.2em;
+    }
+    .proyecto-card h3 {
+        font-size: 0.97rem;
+    }
+    .proyecto-card p {
+        font-size: 0.87rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.93rem;
+        padding: 0.7em 0.7em;
     }
 }
 .social-link img {
