@@ -365,3 +365,21 @@ footer {
     filter: drop-shadow(0 0 16px #8f2ee6cc) brightness(1.3);
     transform: scale(1.15);
 }
+.proyecto-card {
+    background: rgba(34, 37, 54, 0.98);
+    border-radius: 1.1rem;
+    box-shadow: 0 0 18px #2380e833, 0 0px 60px #8f2ee61c;
+    overflow: hidden; /* Muy importante */
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 2px solid transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.proyecto-card:hover {
+    box-shadow:
+        0 0 44px 8px #8f2ee6cc, /* Luz azul/púrpura más grande */
+        0 0px 80px 40px #2380e844;
+    /* El resplandor se adapta a la forma gracias a overflow y border-radius */
+    transform: translateY(-8px) scale(1.025);
+}
