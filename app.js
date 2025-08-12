@@ -26,20 +26,30 @@ document.querySelectorAll('.proyecto-card').forEach(card => {
 });
 
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // Evita que el formulario recargue la página
+  document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("contactForm").addEventListener("submit", function(e) {
+                e.preventDefault();
 
-    // Tu número de WhatsApp (formato internacional sin + ni espacios)
-    let numero = "5493704771041"; // Ejemplo: 5493704123456
-    // Capturar valores
-    let nombre = document.getElementById("nombre").value;
-    let mensaje = document.getElementById("mensaje").value;
+                // Número de WhatsApp con formato internacional (sin + ni espacios)
+                let numero = 5493704771041; // Cambiar por el tuyo
 
-    // Construir mensaje para WhatsApp
-    let texto = `Hola, soy ${nombre}.%0A${mensaje}`;
+                let nombre = document.getElementById("nombre").value.trim();
+                let edad = document.getElementById("edad").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let mensaje = document.getElementById("mensaje").value.trim();
 
-    // Abrir WhatsApp con el mensaje
-    let url = `https://wa.me/${numero}?text=${texto}`;
-    window.open(url, "_blank");
-});
+                if (!nombre || !edad || !email || !mensaje) {
+                    alert("Por favor completa todos los campos.");
+                    return;
+                }
 
+                let texto = `Hola, me llamo ${nombre}.%0A` +
+                            `Edad: ${edad}%0A` +
+                            `Email: ${email}%0A` +
+                            `Motivo: ${mensaje}`;
+
+                let url = `https://wa.me/${numero}?text=${texto}`;
+
+                window.open(url, "_blank");
+            });
+        });
