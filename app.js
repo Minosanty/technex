@@ -24,3 +24,22 @@ document.querySelectorAll('.proyecto-card').forEach(card => {
         this.classList.toggle('hovered');
     });
 });
+
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Evita que el formulario recargue la página
+
+    // Tu número de WhatsApp (formato internacional sin + ni espacios)
+    let numero = "5493704771041"; // Ejemplo: 5493704123456
+    // Capturar valores
+    let nombre = document.getElementById("nombre").value;
+    let mensaje = document.getElementById("mensaje").value;
+
+    // Construir mensaje para WhatsApp
+    let texto = `Hola, soy ${nombre}.%0A${mensaje}`;
+
+    // Abrir WhatsApp con el mensaje
+    let url = `https://wa.me/${numero}?text=${texto}`;
+    window.open(url, "_blank");
+});
+
