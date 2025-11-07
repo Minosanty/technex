@@ -1,0 +1,392 @@
+<!-- 
+====================================================
+CLUB DE ROBÓTICA TECHNEX - LANDING PAGE
+====================================================
+📁 Archivo: index.html
+🧠 Desarrollado como ejemplo profesional y editable
+
+📝 INSTRUCCIONES DE EDICIÓN:
+- Logo: reemplazar "img/logo.png" por el tuyo.
+- Colores: modificar variables CSS en :root (--primary, --accent, etc.)
+- Imágenes: se encuentran en /img (Araña.jpg, Baston.jpg, Brazo.jpg, grupo.jpg)
+- Red social: modificar el enlace en el footer (por defecto Instagram)
+- Correo del club: buscar “technexclub@gmail.com” y reemplazar si es necesario.
+====================================================
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club de Robótica Technex</title>
+  <meta name="description" content="Club de Robótica Technex — Innovación, aprendizaje y comunidad." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #4f00ff;
+      --accent: #00eaff;
+      --bg: #0a0a1a;
+      --text: #ffffff;
+      --muted: #fff8f8;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    /* Estilos personalizados para la navbar */
+.custom-navbar {
+  background: linear-gradient(90deg, #0a0a3a, #1c1c6c);
+  padding: 10px 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo del logo */
+.logo-navbar {
+  height: 50px; /* 🔽 Ajustá el tamaño según tu logo */
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-navbar:hover {
+  transform: scale(1.05);
+}
+
+/* Enlaces del menú */
+.navbar-nav .nav-link {
+  color: #c1b2ff; /* tono violeta suave */
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Enlace activo */
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  border-bottom: 2px solid #7a5cff;
+}
+
+/* Ajustes del menú móvil */
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+    /* Hero */
+    #inicio {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      background: linear-gradient(-45deg, var(--primary), var(--accent), #6a00ff, #00cfff);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+      padding: 0 15px;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #inicio h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+    }
+
+    #inicio p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 20px auto;
+      color: #ffeded;
+    }
+
+    .btn-cta {
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      padding: 12px 30px;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: all 0.3s;
+    }
+
+    .btn-cta:hover {
+      background: var(--primary);
+      color: var(--text);
+      box-shadow: 0 0 15px var(--accent);
+    }
+
+    /* Sección Proyectos */
+    #proyectos {
+      padding: 80px 15px;
+      background: #0d0d2b;
+    }
+
+    #proyectos h2 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 50px;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+
+     #proyectos p {
+      color: white;
+    }
+    .card {
+      background-color: #141433;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(252, 252, 252, 0.925);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(0, 234, 255, 0.4);
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .card-body h5 {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Contacto */
+    #contacto {
+      padding: 80px 15px;
+      background: #09091f;
+    }
+
+    #contacto h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    .form-control {
+      background-color: #141433;
+      border: 1px solid #ffeded;
+      color: var(--text);
+    }
+
+    .form-control:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    .btn-send {
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-send:hover {
+      background: var(--primary);
+      color: var(--text);
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    /* Footer */
+    footer {
+      background: #070716;
+      text-align: center;
+      padding: 30px 0;
+      color: var(--muted);
+    }
+
+    footer img {
+      height: 35px;
+      margin-bottom: 10px;
+      transition: transform 0.3s;
+    }
+
+    footer img:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 6px var(--accent));
+    }
+
+    /* Animaciones scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    
+    <!-- LOGO DEL CLUB -->
+    <!-- 🔽 Aquí podés colocar tu logo (reemplazá el src por el tuyo) -->
+    <a class="navbar-brand" href="#inicio">
+      <img src="img/logo.png" alt="Logo Technex" class="logo-navbar">
+    </a>
+
+    <!-- Botón de menú responsive -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Enlaces del menú -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- HERO -->
+  <section id="inicio">
+    <h1>Club de Robótica Technex</h1>
+    <p>Innovación, aprendizaje y comunidad. Explorando la tecnología para cambiar el futuro.</p>
+    <a href="#proyectos" class="btn btn-cta mt-3">Ver proyectos</a>
+    <a href="https://docs.google.com/forms/u/0/d/1p7GpE1cQ27mOyfcJvaROLmzAMy0nhzmcl6YesGlj0B8/viewform?pli=1&pli=1&edit_requested=true#responses" class="btn btn-cta mt-3">Inscribirse Ahora</a>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos">
+    <div class="container">
+      <h2>Nuestros Proyectos</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 fade-in">
+          <div class="card">
+            <img src="img/Araña.jpg" alt="Proyecto Araña">
+            <div class="card-body">
+              <h5>Robot Araña</h5>
+              <p>Un robot de múltiples patas Proyectos basicos de introduccion para los más chicos </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 fade-in">
+          <div class="card">
+            <img src="img/Baston.jpg" alt="Proyecto Bastón inteligente">
+            <div class="card-body">
+              <h5>Bastón Inteligente</h5>
+              <p>Dispositivo con sensores ultrasónicos para asistencia a personas con discapacidad visual.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 fade-in">
+          <div class="card">
+            <img src="img/Brazo.jpg" alt="Proyecto Brazo robótico">
+            <div class="card-body">
+              <h5>Brazo Robótico</h5>
+              <p>Un brazo automatizado diseñado para realizar tareas de precisión y programación educativa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 fade-in">
+          <div class="card">
+            <img src="img/grupo.jpg" alt="Equipo trabajando">
+            <div class="card-body">
+              <h5>Colaboración en Equipo</h5>
+              <p>Desarrollo conjunto de proyectos tecnológicos aplicando robótica y creatividad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+   <!-- Contacto Section -->
+    <section class="contacto" id="contacto">
+        <h2>Contacto</h2>
+        <div class="redes-sociales">
+    <a href="https://www.instagram.com/technex10?utm_source=ig_web_button_share_sheet&igsh=azNybHp5MWJ3czRv" class="social-link" title="Instagram">
+        <img src="img/logoIG.png" alt="Instagram" />
+    </a>
+    <a href="https://www.tiktok.com/@clubtechnex?_t=ZM-8yiU1OFiNbM&_r=1" class="social-link" title="tiktok">
+        <img src="img/logoTiktok.png" alt="tiktok" />
+    </a>
+    <a
+    href="https://wa.me/5493704771041?text=¡Hola!%20Estoy%20interesado%20en%20unirme%20al%20Club%20de%20Robótica%20Technex.%20¿Podrían%20proporcionarme%20más%20información?"class="social-link" 
+     target="_blank"
+    id="whatsapp-btn"
+    aria-label="Contactar por WhatsApp"
+  >  <img src="img/logoW.png" alt="WhatsApp" />
+  </a>
+</div>
+    </section>
+
+  <!-- FOOTER -->
+  <footer>
+    
+    <p>© 2025 Club de Robótica Technex. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Animación on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(f => observer.observe(f));
+
+    // Validación formulario
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('formMessage').textContent = '✅ Mensaje enviado (simulado). Gracias por contactarte.';
+      e.target.reset();
+    });
+
+    // Copiar email
+    document.getElementById('copyEmail').addEventListener('click', () => {
+      navigator.clipboard.writeText('technexclub@gmail.com');
+      alert('Correo copiado al portapapeles');
+    });
+  </script>
+</body>
+</html>
